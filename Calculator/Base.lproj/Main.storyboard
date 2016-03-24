@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -69,7 +68,7 @@
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tZB-Pv-2kB">
                                                 <rect key="frame" x="246" y="0.0" width="82" height="82"/>
-                                                <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" secondItem="tZB-Pv-2kB" secondAttribute="height" multiplier="1:1" priority="750" id="olR-SR-FkK"/>
                                                 </constraints>
@@ -295,11 +294,52 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g0T-Cj-WfR" customClass="DisplayLabel" customModule="Calculator" customModuleProvider="target">
-                                <rect key="frame" x="16" y="160" width="288" height="64"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="64" id="fwI-NP-yzH"/>
-                                </constraints>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9sa-97-Fpj">
+                                <rect key="frame" x="0.0" y="158" width="82" height="82"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="×">
+                                    <color key="titleColor" red="0.99822490860000002" green="1" blue="0.9757419088" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="operatorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5uY-bt-46m"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nTz-O5-UZw">
+                                <rect key="frame" x="82" y="158" width="82" height="82"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="÷">
+                                    <color key="titleColor" red="0.99822490860000002" green="1" blue="0.9757419088" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="operatorButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gW0-vj-kWr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VAF-AO-6Uv">
+                                <rect key="frame" x="163" y="158" width="82" height="82"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="%">
+                                    <color key="titleColor" red="0.99822490860000002" green="1" blue="0.9757419088" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="percentButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Moj-z3-9Au"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FrJ-g2-LbD">
+                                <rect key="frame" x="242" y="158" width="82" height="82"/>
+                                <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="·">
+                                    <color key="titleColor" red="0.99822490860000002" green="1" blue="0.9757419088" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="dotButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7lP-4z-ztx"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="g0T-Cj-WfR" customClass="DisplayLabel" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="12" y="86" width="288" height="64"/>
                                 <fontDescription key="fontDescription" type="system" weight="ultraLight" pointSize="64"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -308,12 +348,8 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="W3Z-gj-cFk" secondAttribute="trailing" constant="-20" id="5DB-Jb-zjq"/>
-                            <constraint firstItem="W3Z-gj-cFk" firstAttribute="top" secondItem="g0T-Cj-WfR" secondAttribute="bottom" constant="16" id="LXu-UB-JWm"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="W3Z-gj-cFk" secondAttribute="bottom" id="bJk-20-F6d"/>
-                            <constraint firstItem="g0T-Cj-WfR" firstAttribute="top" relation="greaterThanOrEqual" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="16" id="hjo-Of-DQ0"/>
                             <constraint firstItem="W3Z-gj-cFk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="uE2-RZ-Hld"/>
-                            <constraint firstItem="g0T-Cj-WfR" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="wyd-jh-fGm"/>
-                            <constraint firstItem="g0T-Cj-WfR" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="zWI-8f-yfB"/>
                         </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
@@ -324,7 +360,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="336" y="353"/>
+            <point key="canvasLocation" x="217" y="340"/>
         </scene>
     </scenes>
 </document>

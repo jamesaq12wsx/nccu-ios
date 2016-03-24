@@ -53,5 +53,31 @@ class DisplayLabel: UILabel {
         }
         self.text = self.negative ? text.substringFromIndex(text.startIndex.advancedBy(1)) : "-" + text
     }
-
+    
+    
+    
+    //  MARK: - Percentage
+    
+    func percent() {
+        self.floatValue = self.floatValue / 100
+    }
+    
+    //  MARK: - Dot
+    
+    var dotSign: Bool {
+        if self.floatValue < 0 {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func dot() {
+        if !dotSign {
+            guard let text = self.text else {
+                return
+            }
+            self.text = self.dotSign ? text : "0."
+        }
+    }
 }
